@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent">
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:id="@+id/select_world_layout"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_margin="10dp"
+		android:gravity="top|center">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<EditText
+				android:id="@+id/input_dir_text"
+				android:background="@drawable/button"
+				android:layout_weight="1.0"
+				android:layout_width="0dp"
+				android:layout_height="55dp"
+				android:gravity="left|center"
+				android:layout_marginRight="5dp"
+				android:hint="Input directory name"
+				android:padding="10dp"
+				android:singleLine="true"/>
+
+			<ImageButton
+				android:layout_width="55dp"
+				android:layout_height="55dp"
+				android:onClick="selectWorld"
+				android:background="@drawable/button"
+				android:src="@drawable/ic_folder_open"
+				android:layout_marginLeft="5dp"/>
+
+		</LinearLayout>
+
+		<EditText
+			android:id="@+id/output_dir_text"
+			android:layout_width="match_parent"
+			android:layout_height="55dp"
+			android:hint="@string/output_dir_name"
+			android:background="@drawable/button"
+			android:layout_marginBottom="10dp"
+			android:layout_marginTop="10dp"
+			android:padding="10dp"/>
+
+		<Button
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/convert"
+			android:onClick="startConvertion"
+			android:background="@drawable/button"/>
+
+		<TextView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="©2019 - 2020 Тимашков Иван"
+			android:layout_marginTop="10dp"/>
+
+	</LinearLayout>
+
+	<TextView
+		android:id="@+id/converting_text"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:text="@string/converting"
+		android:gravity="center"
+		android:layout_marginTop="64dp"
+		android:layout_marginBottom="10dp"/>
+
+	<ProgressBar
+		android:id="@+id/progress_bar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:indeterminate="false"
+		style="@style/ProgressBarHorizontal"/>
+
+</LinearLayout>
+
